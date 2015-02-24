@@ -12,20 +12,20 @@ h5 Search
     .col-md-8
         .form-group.form-group-default
             label Congress            
-            input#congress.form-control(type='text', required='')                
+            input#congress.form-control(type='text', required='', placeholder='current: 114')                
     .col-md-4                         
         button.btn.btn-primary(onClick='upcoming_bills.searchByCongress($("#congress").val())') Search
 
-h5 Chambers
+h5 Range
+ul
+    li
+        a(href="#" onClick='upcoming_bills.searchByRange("day")') Todays Bills
+    li
+        a(href="#" onClick='upcoming_bills.searchByRange("week")') This Week's Bills
+
+h5 Bills by Chamber
 ul
     li
         a(href="#" onClick='upcoming_bills.searchByChamber("senate")') Senate
     li
         a(href="#" onClick='upcoming_bills.searchByChamber("house")') House
-
-h5 Range
-ul
-    li
-        a(href="#" onClick='upcoming_bills.searchByRange("day")') Day
-    li
-        a(href="#" onClick='upcoming_bills.searchByRange("week")') Week
